@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Backlog</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="backlog_header">
+            <h1>The Backlog</h1>
+            <div>
+                <input type="text" placeholder="Placeholder.jpg" class="search">
+                <button class="btn_search">
+                    <a href="/create">
+                        + New entry
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="table_section">
+            <table class="backlog_table">
+                <thead class="backlog_head">
+                    <th>S No.</th>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>Paginas</th>
+                    <th>Publicación original</th>
+                    <th>Editorial</th>
+                    <th>Acción</th>
+                </thead>
+                <tbody id="data">
+                    <% results.forEach((libro)=> { %>
+                        <tr>
+                            <td>
+                                <%= libro.id %>
+                            </td>
+                            <td>
+                                <%= libro.titulo %>
+                            </td>
+                            <td>UNDEFINED</td>
+                            <td>
+                                <%= libro.paginas %>
+                            </td>
+                            <td>
+                                <%= libro.fecha_publicacion%>
+                            </td>
+                            <td>
+                                <%= libro.editorial%>
+                            </td>
+                            <td>
+                                <button class="table_btn_ed">
+                                    <a href="/edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </a>
+                                </button>
+                                <button class="table_btn_dlt">
+                                    <a href="/delete">
+                                        <i class="fa-sharp fa-solid fa-trash"></i>
+                                    </a>
+                                </button>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="pagination">
+        <div><i class="fa-solid fa-angles-left"></i></div>
+        <div><i class="fa-solid fa-angle-left"></i></div>
+        <div>1</div>
+        <div><i class="fa-solid fa-angle-right"></i></div>
+        <div><i class="fa-solid fa-angles-right"></i></div>
+    </div>
+    <div class="user_info">
+        <div>
+            <h4>user ID</h4>
+            <h4>user IP</h4>
+        </div>
+    </div>
+</body>
+
+</html>
