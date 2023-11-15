@@ -37,7 +37,7 @@ button {
     padding: 10px;
 }
 
-.btn_search {
+.btn_new {
     padding: 10px 20px;
     font-family: 'Oswald', sans-serif;
     color: #ffffff;
@@ -159,50 +159,80 @@ tr:hover td {
     color: #f6f9fc;
 }
 
-.create_section {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*CARD BODY*/
+.card_body {
     display: flex;
-    height: 70vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
-.card_body {
-
+.card_container {
+    max-width: 700px;
     width: 100%;
     background-color: #f6f9fc;
-    padding: 50px 60px;
+    padding: 25px 30px;
     border-radius: 16px;
 }
 
-.card_title {
-    font-size: 30px;
-    font-weight: 500;
-    position: relative;
-    padding-bottom: 10px;
+.card_container .title {
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 
-.informacion_primaria {
+.card_container form .book_details {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
-.informacion_primaria label {
-    font-weight: 300;
+form .book_details .input_box {
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
 }
 
-.text_primario {
-    height: 30px;
-    width: 300px;
-    margin: 10px;
+.book_details .input_box .details {
+    display: block;
+    margin-bottom: 5px;
 }
+
+.book_details .input_box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 6px;
+    background-color: #dcd3ce;
+    border: 1px solid #ccc;
+    padding-left: 16px;
+    font-size: 16px;
+}
+
+.save {
+    background-color: #0298cf;
+    font-family: 'Oswald', sans-serif;
+    color: #f6f9fc;
+}
+
+.save:hover {
+    background-color: #5ecbf2;
+    transition: 0.3s;
+}
+
+.cancel {
+    background-color: #f80000;
+    font-family: 'Oswald', sans-serif;
+    color: #f6f9fc;
+}
+
+.cancel:hover {
+    background-color: #fc6868;
+    transition: 0.3s;
+}
+
+/*EXTRAS*/
 
 ::placeholder {
-    color: #f6f9fc;
+    color: #78716c;
 }
 
 ::-webkit-scrollbar {

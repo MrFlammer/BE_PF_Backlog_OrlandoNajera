@@ -13,46 +13,44 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="backlog_header">
-            <h1>The Backlog</h1>
-        </div>
-        <div class="create_section">
-            <div class="card_body">
-                <div class="card_title">Nueva Entrada</div>
-                <form action="/save" method="POST">
-                    <div class="informacion_primaria">
-                        <label for="titulo">Titulo</label>
-                        <input type="text" class="text_primario" id="titulo" name="titulo" tabindex="1">
-                        <label for="autor_nombre">Nombre del autor</label>
-                        <input type="text" class="text_primario nombre" id="autor_nombre" name="autor_nombre"
-                            tabindex="2">
-                        <label for="autor_apellido">Apellido del autor</label>
-                        <input type="text" class="text_primario apellido" id="autor_apellido" name="autor_apellido"
-                            tabindex="3">
+    <div class="card_body">
+        <div class="card_container">
+            <div class="title">Nueva entrada</div>
+            <form action="/save" method="POST">
+                <div class="book_details">
+                    <div class="input_box">
+                        <span class="details">Titulo</span>
+                        <input type="text" id="titulo" name="titulo" placeholder="Titulo" tabindex="1">
                     </div>
-                    <div class="informacion_secundaria">
-                        <label for="paginas">Numero de paginas</label>
-                        <input type="text" class="text_secundario" id="paginas" name="paginas" tabindex="4">
-                        <label for="fecha_publicacion">Publicacion original</label>
-                        <input type="text" class="text_secundario" id="publicacion" name="publicacion" tabindex="5">
-                        <label for="editorial">Editorial</label>
-                        <input type="text" class="text_secundario" id="editorial" name="editorial" tabindex="6">
+                    <div class="input_box">
+                        <span class="details">Autor: Nombre</span>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" tabindex="2">
                     </div>
-                    <div class="create_botones">
-                        <button type="submit" class="btn_guardar" tabindex="7">Guardar</button>
-                        <button class="btn_cancelar">
-                            <a href="/">Cancelar</a>
-                        </button>
+                    <div class="input_box">
+                        <span class="details">Autor: Apellidos</span>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" tabindex="3">
                     </div>
-                </form>
-            </div>
-        </div>
-        <div class="user_info">
-            <div>
-                <h4>user ID</h4>
-                <h4>user IP</h4>
-            </div>
+                    <div class="input_box">
+                        <span class="details">Paginas</span>
+                        <input type="text" id="paginas" name="paginas" placeholder="Paginas" tabindex="4">
+                    </div>
+                    <div class="input_box">
+                        <span class="details">Año de publicación</span>
+                        <input type="text" id="fecha_publicacion" name="fecha_publicacion"
+                            placeholder="Fecha de Publicación" tabindex="5">
+                    </div>
+                    <div class="input_box">
+                        <span class="details">Editorial</span>
+                        <input type="text" id="editorial" name="editorial" placeholder="Editorial" tabindex="6">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="save">Guardar</button>
+                    <button class="cancel">
+                        <a href="/">Cancelar</a>
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </body>

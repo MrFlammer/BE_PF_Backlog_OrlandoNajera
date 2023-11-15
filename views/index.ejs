@@ -17,8 +17,7 @@
         <div class="backlog_header">
             <h1>The Backlog</h1>
             <div>
-                <input type="text" placeholder="Placeholder.jpg" class="search">
-                <button class="btn_search">
+                <button class="btn_new">
                     <a href="/create">
                         + New entry
                     </a>
@@ -30,10 +29,11 @@
                 <thead class="backlog_head">
                     <th>S No.</th>
                     <th>Titulo</th>
-                    <th>Autor</th>
                     <th>Paginas</th>
                     <th>Publicación original</th>
                     <th>Editorial</th>
+                    <th>Autor Nombre</th>
+                    <th>Autor Apellidos</th>
                     <th>Acción</th>
                 </thead>
                 <tbody id="data">
@@ -45,7 +45,6 @@
                             <td>
                                 <%= libro.titulo %>
                             </td>
-                            <td>UNDEFINED</td>
                             <td>
                                 <%= libro.paginas %>
                             </td>
@@ -54,6 +53,12 @@
                             </td>
                             <td>
                                 <%= libro.editorial%>
+                            </td>
+                            <td>
+                                <%= libro.nombre%>
+                            </td>
+                            <td>
+                                <%= libro.apellidos%>
                             </td>
                             <td>
                                 <button class="table_btn_ed">
