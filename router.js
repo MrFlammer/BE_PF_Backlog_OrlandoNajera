@@ -34,7 +34,7 @@ router.get('/edit/:id', (req, res) => {
 //ELIMINAR REGISTRO
 router.get('/delete/:id', (req, res) => {
     const id = req.params.id;
-    const id_autor = req.params.id_autor;
+    const id_autor = id;
     conexion.query('DELETE FROM libro WHERE id = ?', [id], (error, resultados) => {
         if (error) {
             console.error(error);
