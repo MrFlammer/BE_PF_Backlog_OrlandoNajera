@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Backlog</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <% if(libro) { %>
+        <div class="card_body">
+            <div class="card_container">
+                <div class="title">Editar entrada</div>
+                <form action="/update" method="POST">
+                    <input id="id" name="id" value="<% libro.id %>" hidden>
+                    <div class="book_details">
+                        <div class="input_box">
+                            <span class="details">Titulo</span>
+                            <input type="text" id="titulo" name="titulo" value="<%= libro.titulo %>" tabindex="1">
+                        </div>
+                        <div class="input_box">
+                            <span class="details">Paginas</span>
+                            <input type="text" id="paginas" name="paginas" value="<%= libro.paginas %>" tabindex="4">
+                        </div>
+                        <div class="input_box">
+                            <span class="details">Año de publicación</span>
+                            <input type="text" id="fecha_publicacion" name="fecha_publicacion"
+                                value="<%= libro.fecha_publicacion %>" tabindex="5">
+                        </div>
+                        <div class="input_box">
+                            <span class="details">Editorial</span>
+                            <input type="text" id="editorial" name="editorial" value="<%= libro.editorial %>"
+                                tabindex="6">
+                        </div>
+                        <div class="input_box">
+                            <span class="details">Autor: Nombre</span>
+                            <input type="text" id="nombre" name="nombre" value="<%= libro.nombre %>" tabindex="2">
+                        </div>
+                        <div class="input_box">
+                            <span class="details">Autor: Apellidos</span>
+                            <input type="text" id="apellidos" name="apellidos" value="<% libro.apellidos %>"
+                                tabindex="3">
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="save">Guardar</button>
+                        <button class="cancel">
+                            <a href="/">Cancelar</a>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <% } %>
+</body>
+
+</html>
