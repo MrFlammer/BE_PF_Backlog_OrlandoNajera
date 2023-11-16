@@ -18,7 +18,7 @@
             <div class="card_container">
                 <div class="title">Editar entrada</div>
                 <form action="/update" method="POST">
-                    <input id="id" name="id" value="<% libro.id %>" hidden>
+                    <input id="id" name="id" value="<%= libro.id %>" hidden>
                     <div class="book_details">
                         <div class="input_box">
                             <span class="details">Titulo</span>
@@ -30,8 +30,8 @@
                         </div>
                         <div class="input_box">
                             <span class="details">Año de publicación</span>
-                            <input type="text" id="fecha_publicacion" name="fecha_publicacion"
-                                value="<%= libro.fecha_publicacion %>" tabindex="5">
+                            <input type="text" id="publicacion" name="publicacion" value="<%= libro.publicacion %>"
+                                tabindex="5">
                         </div>
                         <div class="input_box">
                             <span class="details">Editorial</span>
@@ -44,7 +44,7 @@
                         </div>
                         <div class="input_box">
                             <span class="details">Autor: Apellidos</span>
-                            <input type="text" id="apellidos" name="apellidos" value="<% libro.apellidos %>"
+                            <input type="text" id="apellidos" name="apellidos" value="<%= libro.apellidos %>"
                                 tabindex="3">
                         </div>
                     </div>
