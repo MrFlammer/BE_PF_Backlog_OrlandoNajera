@@ -121,7 +121,7 @@ tr:hover td {
     transition: 0.3s;
 }
 
-.pagination {
+.table_bottom {
     display: flex;
     justify-content: center;
     width: 100%;
