@@ -22,7 +22,7 @@ router.get('/create', (req, res) => {
 //EDITAR REGISTROS
 router.get('/edit/:id', (req, res) => {
     const id = req.params.id;
-    conexion.query('SELECT * FROM libro CROSS JOIN autor ON libro.id = autor.id_autor WHERE libro.id= ?', [id], (error, results) => {
+    conexion.query('SELECT * FROM libro CROSS JOIN autor ON libro.id = autor.id_autor WHERE libro.id = ?', [id], (error, results) => {
         if (error) {
             return console.log('error:' + error);
         } else {
